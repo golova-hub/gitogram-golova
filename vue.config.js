@@ -4,5 +4,7 @@ module.exports = defineConfig({
 });
 
 module.exports = {
-  publicPath: '/gitogram-golova/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/gitogram-golova/'
+    : '/'
 }
